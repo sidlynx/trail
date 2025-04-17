@@ -1,64 +1,47 @@
-# trail
+## Prérequis
 
-This template should help get you started developing with Vue 3 in Vite.
+Il faut avoir nodejs installé sur sa machine.
 
-## Recommended IDE Setup
+Ouvrir le terminal et se placer dans le dossier du projet.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Installer les dépendances du projet avec la commande suivante :
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-pnpm install
+```bash
+npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Lancer le projet
+Pour lancer le projet, il faut exécuter la commande suivante :
 
-```sh
-npm dev
+```bash
+npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+Le projet sera lancé par défaut sur le port 80. Vous pouvez y accéder en ouvrant votre navigateur et en allant à l'adresse suivante :
 
-```sh
-npm build
-```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
 
-```sh
-npm test:unit
-```
+Ouvrir le navigateur et aller à l'adresse suivante : http://localhost si le port 80 est disponible, sinon aller sur l'url http://localhost:$port,
+avec $port le port sur lequel le projet est lancé.(il est logiquement affiché dans le terminal après la commande `npm run dev`).
 
-### Run End-to-End Tests with [Playwright](https://playwright.dev)
+## Problèmes qui peuvent survenir
+- Si la carte bloque ou qu'il y a une erreur, rafraichir la page
 
-```sh
-# Install browsers for the first run
-npx playwright install
+## Pistes d'améliorations:
+- Mieux gérer les erreurs de l'API
+- Ajouter un loader pendant le chargement des données
+- Ajouter des tests unitaires
+- Lire la position de départ à partir de la localisation de l'utilisateur
+- Ajouter des tests end-to-end
+- Ajouter des tests de performance
+- Utiliser une librairie css pour améliorer le design et la productivité comme tailwindcss ou bootstrap
+- Ajouter un stepper
+- Ajouter des instructions pour rendre l'utilisation intuitive
+- Dockeriser l'environnement de dev
+- Ajouter une chaine CI/CD pour déployer l'application sur un serveur
+- Ajouter un input pour que l'utilisateur choisit le type de trail(voiture,vélo,footing...)
+- Ajouter l'internationalisation pour que l'app s'adapte à la langue de l'utilisateur
+- Ajouter ce qu'il faut pour que l'application soit une progresssive web app(utilisable dans l'état sur mobile)
+- Ajouter husky pour vérifier le code avant de le pousser(hooks)
+- Ajouter commitlint et commitizen pour la clareté des messages de commits
 
-# When testing on CI, must build the project first
-npm build
-
-# Runs the end-to-end tests
-npm test:e2e
-# Runs the tests only on Chromium
-npm test:e2e --project=chromium
-# Runs the tests of a specific file
-npm test:e2e tests/example.spec.ts
-# Runs the tests in debug mode
-npm test:e2e --debug
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
